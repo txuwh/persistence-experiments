@@ -71,7 +71,8 @@
 								 constraintName="partner_address_state_partner_fk"/>
 		<addForeignKeyConstraint baseTableName="partner_address_state" baseColumnNames="address_id"
 								 referencedTableName="address" referencedColumnNames="id"
-								 constraintName="partner_address_state_address_fk"/>
+								 constraintName="partner_address_state_
+								 address_fk"/>
 	</changeSet>
 
 </databaseChangeLog>
