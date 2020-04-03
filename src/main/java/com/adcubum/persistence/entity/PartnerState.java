@@ -11,8 +11,6 @@ import javax.persistence.ManyToOne;
 import java.util.Date;
 
 @Entity
-@FilterDef(name="state", parameters=@ParamDef( name="keyDate", type="integer" ) )
-@Filter(name="betweenDates", condition=":keyDate BETWEEN stateBegin AND stateEnd")
 public class PartnerState implements State<Partner>  {
 
     @Id
