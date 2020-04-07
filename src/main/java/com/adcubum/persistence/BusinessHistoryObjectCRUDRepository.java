@@ -8,12 +8,12 @@ import java.util.Optional;
 
 public interface BusinessHistoryObjectCRUDRepository<T extends State> {
 
-    void create(T state);
-
+    void create(List<T> state); //init a new state
+    void overwrite(List<T> state); //overwrites all of state
+    void insert(T state); //adds new time segment
+    void reset(T state, LocalDate newDateFrom, LocalDate newDateTo); //re arrange time period of the state
+    void shift(String id, LocalDate newDateFrom); //shift the time periods
+    void delete(String id);; //Delete the whole business history
     Optional<T> findById(String id, Date keyDate);
-
-    void update(T state);
-
-    void delete(T state);
 
 }
